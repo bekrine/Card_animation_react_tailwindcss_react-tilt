@@ -1,14 +1,14 @@
 export const AnimationOptions = (
-  reverse,
-  max,
-  perspective,
-  scale,
-  speed,
-  transition,
-  axis,
-  reset,
-  easing
-) => {
+  reverse:boolean,
+  max:number,
+  perspective:number,
+  scale:number,
+  speed:number,
+  transition:boolean,
+  axis:null|"Y"|'X',
+  reset:boolean,
+  easing:string
+): animationOptions => {
   const defaultOption = {
     reverse: reverse, // reverse the tilt direction
     max: max, // max tilt rotation (degrees)
@@ -23,3 +23,16 @@ export const AnimationOptions = (
 
   return defaultOption;
 };
+
+
+type animationOptions = {
+  reverse:boolean,
+max:number,
+perspective:number,
+scale:number,
+speed:number,
+transition:boolean,
+axis:null|"Y"|'X',
+reset:boolean,
+easing:string
+}
